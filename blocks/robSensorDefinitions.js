@@ -145,7 +145,6 @@ sensors.colour.botnroll = {
 };
 sensors.colour.ev3 = {
     title : 'COLOUR',
-    ports : [ [ 'Port 1', '1' ], [ 'Port 2', '2' ], [ 'Port 3', '3' ], [ 'Port 4', '4' ] ],
     modes : [ {
         name : 'COLOUR',
         type : 'Colour',
@@ -164,7 +163,7 @@ sensors.colour.ev3 = {
         name : 'RGB',
         type : 'Array_Number'
     } ],
-    standardPort : '3'
+    ports : 'CONFIGURATION'
 };
 sensors.colour.nxt = {
     title : 'COLOUR',
@@ -217,8 +216,7 @@ sensors.compass.ev3 = {
         type : 'Number',
         unit : 'DEGREE'
     } ],
-    ports : [ [ 'Port 1', '1' ], [ 'Port 2', '2' ], [ 'Port 3', '3' ], [ 'Port 4', '4' ] ],
-    standardPort : '1'
+    ports : 'CONFIGURATION'
 };
 
 sensors.compass.sensebox = {
@@ -343,8 +341,7 @@ sensors.encoder.ev3 = {
         type : 'Number',
         unit : 'CM'
     } ],
-    ports : [ [ 'A', 'A' ], [ 'B', 'B' ], [ 'C', 'C' ], [ 'D', 'D' ] ],
-    standardPort : 'B'
+    ports : 'CONFIGURATION'
 };
 
 sensors.encoder.nxt = {
@@ -508,8 +505,7 @@ sensors.gyro.ev3 = {
         op : 'NUM_REV',
         value : 90
     } ],
-    ports : [ [ 'Port 1', '1' ], [ 'Port 2', '2' ], [ 'Port 3', '3' ], [ 'Port 4', '4' ] ],
-    standardPort : '2'
+    ports : 'CONFIGURATION'
 };
 
 sensors.gyro.wedo = {
@@ -563,7 +559,6 @@ sensors.gyro.arduino = {
 sensors.htcolour = {};
 sensors.htcolour.ev3 = {
     title : 'HTCOLOUR',
-    ports : [ [ 'Port 1', '1' ], [ 'Port 2', '2' ], [ 'Port 3', '3' ], [ 'Port 4', '4' ] ],
     modes : [ {
         name : 'COLOUR',
         type : 'Colour',
@@ -582,7 +577,7 @@ sensors.htcolour.ev3 = {
         name : 'RGB',
         type : 'Array_Number'
     } ],
-    standardPort : '3'
+    ports : 'CONFIGURATION'
 };
 sensors.htcolour.nxt = sensors.htcolour.ev3;
 
@@ -689,7 +684,6 @@ sensors.infrared.mbot = {
 
 sensors.infrared.ev3 = {
     title : 'INFRARED',
-    ports : [ [ 'Port 1', '1' ], [ 'Port 2', '2' ], [ 'Port 3', '3' ], [ 'Port 4', '4' ] ],
     modes : [ {
         name : 'DISTANCE',
         type : 'Number',
@@ -697,7 +691,8 @@ sensors.infrared.ev3 = {
     }, {
         name : 'PRESENCE',
         type : 'Array_Number'
-    } ]
+    } ],
+    ports : 'CONFIGURATION'
 };
 
 sensors.infrared.wedo = {
@@ -723,7 +718,6 @@ sensors.infrared.edison = {
 sensors.irseeker = {};
 sensors.irseeker.ev3 = {
     title : 'IRSEEKER',
-    ports : [ [ 'Port 1', '1' ], [ 'Port 2', '2' ], [ 'Port 3', '3' ], [ 'Port 4', '4' ] ],
     modes : [ {
         name : 'MODULATED',
         type : 'Number',
@@ -732,7 +726,8 @@ sensors.irseeker.ev3 = {
         name : 'UNMODULATED',
         type : 'Number',
         unit : 'DEGREE'
-    } ]
+    } ],
+    ports : 'CONFIGURATION'
 };
 
 sensors.irseeker.edison = {
@@ -790,8 +785,7 @@ sensors.key.ev3 = {
         type : 'Boolean',
         question : true
     } ],
-    ports : [ [ 'SENSOR_KEY_ENTER', 'ENTER' ], [ 'SENSOR_KEY_UP', 'UP' ], [ 'SENSOR_KEY_DOWN', 'DOWN' ], [ 'SENSOR_KEY_LEFT', 'LEFT' ],
-            [ 'SENSOR_KEY_RIGHT', 'RIGHT' ], [ 'SENSOR_KEY_ESCAPE', 'ESCAPE' ], [ 'SENSOR_KEY_ANY', 'ANY' ] ]
+    ports : 'CONFIGURATION'
 };
 sensors.key.nxt = {
     title : 'KEY',
@@ -1092,8 +1086,7 @@ sensors.sound.ev3 = {
         op : 'NUM_REV',
         value : 50
     } ],
-    ports : [ [ 'Port 1', '1' ], [ 'Port 2', '2' ], [ 'Port 3', '3' ], [ 'Port 4', '4' ] ],
-    standardPort : '2'
+    ports : 'CONFIGURATION'
 };
 
 sensors.sound.sensebox = {
@@ -1210,17 +1203,15 @@ sensors.timer.festobionic = sensors.timer.ev3;
 sensors.timer.mbot = sensors.timer.ev3;
 sensors.timer.sensebox = sensors.timer.ev3;
 
-
 sensors.touch = {};
 sensors.touch.ev3 = {
     title : 'TOUCH',
-    ports : [ [ 'Port 1', '1' ], [ 'Port 2', '2' ], [ 'Port 3', '3' ], [ 'Port 4', '4' ] ],
     modes : [ {
         name : 'PRESSED',
         type : 'Boolean',
         question : true
     } ],
-    standardPort : '1'
+    ports : 'CONFIGURATION'
 };
 sensors.touch.nxt = sensors.touch.ev3;
 sensors.touch.mbot = sensors.touch.ev3;
@@ -1285,7 +1276,6 @@ sensors.ultrasonic.calliope = {
 };
 sensors.ultrasonic.ev3 = {
     title : 'ULTRASONIC',
-    ports : [ [ 'Port 1', '1' ], [ 'Port 2', '2' ], [ 'Port 3', '3' ], [ 'Port 4', '4' ] ],
     modes : [ {
         name : 'DISTANCE',
         type : 'Number',
@@ -1294,7 +1284,7 @@ sensors.ultrasonic.ev3 = {
         name : 'PRESENCE',
         type : 'Boolean'
     } ],
-    standardPort : '4'
+    ports : 'CONFIGURATION'
 };
 sensors.ultrasonic.mbot = {
     title : 'ULTRASONIC',

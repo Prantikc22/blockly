@@ -156,6 +156,67 @@ Blockly.Blocks.robConfigDefinitions['pins_wedo'] = function() {
     return createPins(1, 2);
 };
 
+Blockly.Blocks.robConfigDefinitions['portsActors'] = {};
+Blockly.Blocks.robConfigDefinitions['portsActors'].ev3 = function() {
+    return [ [ 'A', 'A' ], [ 'B', 'B' ], [ 'C', 'C' ], [ 'D', 'D' ] ];
+};
+
+Blockly.Blocks.robConfigDefinitions['portsSensors'] = {};
+Blockly.Blocks.robConfigDefinitions['portsSensors'].ev3 = function() {
+    return [ [ 'Port 1', '1' ], [ 'Port 2', '2' ], [ 'Port 3', '3' ], [ 'Port 4', '4' ] ];
+};
+
+confBlocks.placeholder = {};
+confBlocks.placeholder.bob3 = {
+    title : 'PLACEHOLDER'
+};
+confBlocks.placeholder.edison = confBlocks.placeholder.bob3;
+confBlocks.placeholder.nao = confBlocks.placeholder.bob3;
+
+confBlocks.colour = {};
+confBlocks.colour.ev3 = {
+    title : 'COLOUR',
+    ports : [ [ 'Port', 'Port' ] ],
+    pins : function(a) {
+        return Blockly.Blocks.robConfigDefinitions['portsSensors'][a];
+    },
+    sensor : true,
+    standardPins : [ '3' ],
+};
+
+confBlocks.htcolour = {};
+confBlocks.htcolour.ev3 = {
+    title : 'HTCOLOUR',
+    ports : [ [ 'Port', 'Port' ] ],
+    pins : function(a) {
+        return Blockly.Blocks.robConfigDefinitions['portsSensors'][a];
+    },
+    sensor : true,
+    standardPins : [ '3' ],  
+};
+
+confBlocks.encoder = {};
+confBlocks.encoder.ev3 = {
+    title : 'ENCODER',
+    ports : [ [ 'Port', 'Port' ] ],
+    pins : function(a) {
+        return Blockly.Blocks.robConfigDefinitions['portsActors'][a];
+    },
+    sensor : true,
+    standardPins : [ 'B' ],
+};
+
+confBlocks.touch = {};
+confBlocks.touch.ev3 = {
+    title : 'TOUCH',
+    ports : [ [ 'Port', 'Port' ] ],
+    pins : function(a) {
+        return Blockly.Blocks.robConfigDefinitions['portsSensors'][a];
+    },
+    sensor : true,
+    standardPins : [ '1' ],
+};
+
 confBlocks.ultrasonic = {};
 confBlocks.ultrasonic.arduino = {
     title : 'ULTRASONIC',
@@ -174,6 +235,15 @@ confBlocks.ultrasonic.calliope = {
         return [['A1', '1']];
     },
     sensor : true
+};
+confBlocks.ultrasonic.ev3 = {
+    title : 'ULTRASONIC',
+    ports : [ [ 'Port', 'Port' ] ],
+    pins : function(a) {
+        return Blockly.Blocks.robConfigDefinitions['portsSensors'][a];
+    },
+    sensor : true,
+    standardPins : [ '4' ],
 };
 confBlocks.ultrasonic.sensebox = {
     title : 'ULTRASONIC',
@@ -257,6 +327,15 @@ confBlocks.compass.calliope = {
     sensor : true
 };
 confBlocks.compass.microbit = confBlocks.compass.calliope;
+confBlocks.compass.ev3 = {
+    title : 'COMPASS',
+    ports : [ [ 'Port', 'Port' ] ],
+    pins : function(a) {
+        return Blockly.Blocks.robConfigDefinitions['portsSensors'][a];
+    },
+    sensor : true,
+    standardPins : [ '1' ],
+};
 confBlocks.compass.sensebox = {
     title : 'COMPASS',
     sensor : true
@@ -298,6 +377,15 @@ confBlocks.potentiometer.sensebox = {
 };
 
 confBlocks.infrared = {};
+confBlocks.infrared.ev3 = {
+    title : 'INFRARED',
+    ports : [ [ 'Port', 'Port' ] ],
+    pins : function(a) {
+        return Blockly.Blocks.robConfigDefinitions['portsSensors'][a];
+    },
+    sensor : true,
+    standardPins : [ '3' ],
+};
 confBlocks.infrared.wedo = {
     title : 'INFRARED',
     bricks : true,
@@ -314,6 +402,16 @@ confBlocks.infrared.arduino = {
     sensor : true,
     standardPins : [ '11' ],
     fixedPorts : [ [ 'GND', 'GND' ], [ 'VCC', '5V' ] ]
+};
+confBlocks.irseeker = {};
+confBlocks.irseeker.ev3 = {
+    title : 'IRSEEKER',
+    ports : [ [ 'Port', 'Port' ] ],
+    pins : function(a) {
+        return Blockly.Blocks.robConfigDefinitions['portsSensors'][a];
+    },
+    sensor : true,
+    standardPins : [ '3' ],
 };
 
 confBlocks.temperature = {};
@@ -404,6 +502,17 @@ confBlocks.key.calliope = {
 };
 confBlocks.key.microbit = confBlocks.key.calliope;
 confBlocks.key.sensebox = confBlocks.key.arduino;
+confBlocks.key.ev3 = {
+    title : 'KEY',
+    ports : [ [ 'Port', 'Port' ] ],
+    pins : function(a) {
+        return [ [ Blockly.Msg.SENSOR_KEY_ENTER, 'ENTER' ], [ Blockly.Msg.SENSOR_KEY_UP, 'UP' ],
+                 [ Blockly.Msg.SENSOR_KEY_DOWN, 'DOWN' ], [ Blockly.Msg.SENSOR_KEY_LEFT, 'LEFT' ],
+                 [ Blockly.Msg.SENSOR_KEY_RIGHT, 'RIGHT' ], [ Blockly.Msg.SENSOR_KEY_ESCAPE, 'ESCAPE' ],
+                 [ Blockly.Msg.SENSOR_KEY_ANY, 'ANY' ] ];
+    },
+    sensor : true
+};
 confBlocks.key.wedo = {
     title : 'KEY',
     bricks : true,
@@ -457,6 +566,11 @@ confBlocks.lcd.arduino = {
     standardPins : [ '12', '11', '5', '4', '3', '2' ],
     fixedPorts : [ [ 'VSS', 'GND' ], [ 'VDD', '5V' ], [ 'V0', 'Vp' ], [ 'RW', 'GND' ] ]
 };
+confBlocks.lcd.ev3 = {
+    title : 'LCD',
+    ports : [ [ 'pin', 'PIN1' ] ],
+    sensor : false
+}
 
 confBlocks.lcdi2c = {};
 confBlocks.lcdi2c.arduino = {
@@ -540,6 +654,7 @@ confBlocks.buzzer.calliope = {
     ports : [ [ 'pin', 'PIN1' ] ],
     sensor : false
 };
+confBlocks.buzzer.ev3 = confBlocks.buzzer.calliope;
 confBlocks.buzzer.microbit = {
     title : 'BUZZER',
     fixedPorts : [ [ 'pin', '0' ], [ 'GND', 'GND' ] ],
@@ -566,6 +681,15 @@ confBlocks.sound.calliope = {
     title: 'SOUND',
     ports : [ [ 'pin', 'PIN1' ] ],
     sensor : true
+};
+confBlocks.sound.ev3 = {
+    title : 'SOUND',
+    ports : [ [ 'Port', 'Port' ] ],
+    pins : function(a) {
+        return Blockly.Blocks.robConfigDefinitions['portsSensors'][a];
+    },
+    sensor : true,
+    standardPins : [ '2' ],
 };
 confBlocks.sound.sensebox = {
     title : 'SOUND',
@@ -613,6 +737,11 @@ confBlocks.rgbled.calliope = {
     },
     sensor : false
 };
+confBlocks.rgbled.ev3 = {
+    title : 'RGBLED',
+    ports : [ [ 'pin', 'PIN1' ] ],
+    sensor : false
+};
 confBlocks.rgbled.sensebox = {
     title : 'RGBLED',
     ports : [ [ 'input', 'INPUT' ] ],
@@ -658,6 +787,15 @@ confBlocks.servo.calliope = {
 };
 
 confBlocks.gyro = {};
+confBlocks.gyro.ev3 = {
+    title : 'GYRO',
+    ports : [ [ 'Port', 'Port' ] ],
+    pins : function(a) {
+        return Blockly.Blocks.robConfigDefinitions['portsSensors'][a];
+    },
+    sensor : true,
+    standardPins : [ '2' ],
+};
 confBlocks.gyro.wedo = {
     title : 'GYRO',
     bricks : true,
@@ -686,11 +824,44 @@ confBlocks.motor.calliope = {
     },
     action : true
 };
+confBlocks.motor.ev3 = {
+    title : 'MOTOR',
+    ports : [ [ 'CONNECTOR', 'CONNECTOR' ] ],
+    pins : function(a) {
+        return Blockly.Blocks.robConfigDefinitions['portsActors'][a];
+    },
+    action : true,
+    dropdowns : [ [ 'MOTOR_REGULATION', [ [ 'YES', 'TRUE' ],[ 'NO', 'FALSE' ] ] ],
+                  [ 'MOTOR_ROTATION_REVERSE', [ [ 'MOTOR_FOREWARD', 'OFF' ], [ 'MOTOR_BACKWARD', 'ON' ] ] ],
+                  [ 'MOTOR_SIDE', [ [ 'MOTOR_LEFT', 'LEFT' ],[ 'MOTOR_RIGHT', 'RIGHT' ], [ 'MOTOR_NONE', 'NONE' ] ] ] ]
+};
 confBlocks.motor.wedo = {
     title : 'MOTOR',
     bricks : true,
     ports : [ [ 'CONNECTOR', 'CONNECTOR' ] ],
     pins : Blockly.Blocks.robConfigDefinitions['pins_wedo'],
+    action : true
+};
+
+confBlocks.motormiddle = {};
+confBlocks.motormiddle.ev3 = {
+    title : 'MOTORMIDDLE',
+    ports : [ [ 'CONNECTOR', 'CONNECTOR' ] ],
+    pins : function(a) {
+        return Blockly.Blocks.robConfigDefinitions['portsActors'][a];
+    },
+    action : true,
+    dropdowns : [ [ 'MOTOR_REGULATION', [ [ 'YES', 'TRUE' ],[ 'NO', 'FALSE' ] ] ],
+                  [ 'MOTOR_ROTATION_REVERSE', [ [ 'MOTOR_FOREWARD', 'OFF' ], [ 'MOTOR_BACKWARD', 'ON' ] ] ] ]
+};
+
+confBlocks.consumer = {};
+confBlocks.consumer.ev3 = {
+    title : 'CONSUMER',
+    ports : [ [ 'CONNECTOR', 'CONNECTOR' ] ],
+    pins : function(a) {
+        return Blockly.Blocks.robConfigDefinitions['portsActors'][a];
+    },
     action : true
 };
 
