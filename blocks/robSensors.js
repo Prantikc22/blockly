@@ -32,9 +32,6 @@ Blockly.Blocks['robSensors_encoder_reset'] = {
             'type' : 'motor',
             'dropDown' : dropDownPorts
         };
-        if (this.workspace.device === 'botnroll') {
-            dropDownPorts = new Blockly.FieldDropdown([ [ Blockly.Msg.MOTOR_LEFT, 'B' ], [ Blockly.Msg.MOTOR_RIGHT, 'C' ] ]);
-        }
         this.appendDummyInput().appendField(Blockly.Msg.SENSOR_RESET).appendField(Blockly.Msg.SENSOR_ENCODER).appendField(dropDownPorts, 'SENSORPORT').appendField(Blockly.Msg.SENSOR_RESET_II);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
