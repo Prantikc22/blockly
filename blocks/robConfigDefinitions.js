@@ -166,6 +166,16 @@ Blockly.Blocks.robConfigDefinitions['portsSensors'].ev3 = function() {
     return [ [ 'Port 1', '1' ], [ 'Port 2', '2' ], [ 'Port 3', '3' ], [ 'Port 4', '4' ] ];
 };
 
+Blockly.Blocks.robConfigDefinitions['portsActors'] = {};
+Blockly.Blocks.robConfigDefinitions['portsActors'].mbot = function() {
+    return [ [ 'Motor M1', '1' ], [ 'Motor M2', '2' ] ];
+};
+
+Blockly.Blocks.robConfigDefinitions['portsSensors'] = {};
+Blockly.Blocks.robConfigDefinitions['portsSensors'].mbot = function() {
+    return [ [ 'Port 1', '1' ], [ 'Port 2', '2' ], [ 'Port 3', '3' ], [ 'Port 4', '4' ] ];
+};
+
 confBlocks.placeholder = {};
 confBlocks.placeholder.bob3 = {
     title : 'PLACEHOLDER'
@@ -245,6 +255,15 @@ confBlocks.ultrasonic.ev3 = {
     sensor : true,
     standardPins : [ '4' ],
 };
+confBlocks.ultrasonic.mbot = {
+    title : 'ULTRASONIC',
+    ports : [ [ 'Port', 'Port' ] ],
+    pins : function(a) {
+        return Blockly.Blocks.robConfigDefinitions['portsSensors'][a];
+    },
+    sensor : true,
+    standardPins : [ '3' ],
+};
 confBlocks.ultrasonic.sensebox = {
     title : 'ULTRASONIC',
     ports : [ [ 'trig', 'TRIG' ], [ 'echo', 'ECHO' ] ],
@@ -273,6 +292,14 @@ confBlocks.light.calliope = {
     sensor : true
 };
 confBlocks.light.microbit = confBlocks.light.calliope;
+confBlocks.light.mbot = {
+    title : 'LIGHT',
+    ports : [ [ 'Port', 'Port' ] ],
+    pins : function(a) {
+        return Blockly.Blocks.robConfigDefinitions['portsSensors'][a];
+    },
+    sensor : true
+};
 confBlocks.light.sensebox = {
     title : 'LIGHT',
     ports : [ [ 'output', 'OUTPUT' ] ],
@@ -385,6 +412,15 @@ confBlocks.infrared.ev3 = {
     },
     sensor : true,
     standardPins : [ '3' ],
+};
+confBlocks.infrared.mbot = {
+    title : 'INFRARED',
+    ports : [ [ 'Port', 'Port' ] ],
+    pins : function(a) {
+        return Blockly.Blocks.robConfigDefinitions['portsSensors'][a];
+    },
+    sensor : true,
+    standardPins : [ '2' ],
 };
 confBlocks.infrared.wedo = {
     title : 'INFRARED',
@@ -835,6 +871,15 @@ confBlocks.motor.ev3 = {
                   [ 'MOTOR_ROTATION_REVERSE', [ [ 'MOTOR_FOREWARD', 'OFF' ], [ 'MOTOR_BACKWARD', 'ON' ] ] ],
                   [ 'MOTOR_SIDE', [ [ 'MOTOR_LEFT', 'LEFT' ],[ 'MOTOR_RIGHT', 'RIGHT' ], [ 'MOTOR_NONE', 'NONE' ] ] ] ]
 };
+confBlocks.motor.mbot = {
+    title : 'MOTOR',
+    ports : [ [ 'CONNECTOR', 'CONNECTOR' ] ],
+    pins : function(a) {
+        return Blockly.Blocks.robConfigDefinitions['portsActors'][a];
+    },
+    action : true,
+    dropdowns : [ [ 'MOTOR_SIDE', [ [ 'MOTOR_LEFT', 'LEFT' ], [ 'MOTOR_RIGHT', 'RIGHT' ] ] ] ]
+};
 confBlocks.motor.wedo = {
     title : 'MOTOR',
     bricks : true,
@@ -1039,6 +1084,16 @@ confBlocks.environmental.sensebox = {
     },
     sensor : true
 };
+
+confBlocks.ledmatrix = {}
+confBlocks.ledmatrix.mbot = {
+    title : 'LEDMATRIX',
+    ports : [ [ 'CONNECTOR', 'CONNECTOR' ] ],
+    pins : function(a) {
+        return Blockly.Blocks.robConfigDefinitions['portsActors'][a];
+    },
+    action : true
+}
 
 function initConfBlocks() {
     for ( var confBlock in confBlocks) {

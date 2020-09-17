@@ -1547,3 +1547,4 @@ Blockly.Msg.ACTION_CONSUMER = Blockly.Msg.MOTOR_OTHER;
 Blockly.Msg.ACTION_LCD_EV3 = 'display';
 Blockly.Msg.ACTION_RGBLED_EV3 = Blockly.Msg.BRICKLIGHT;
 Blockly.Msg.ACTION_BUZZER_EV3 = 'speaker';
+Blockly.Msg.ACTION_LEDMATRIX = Blockly.Msg.LED_MATRIX;
