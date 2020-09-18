@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"author": "Ellen Spertus <ellen.spertus@gmail.com>",
-		"lastupdated": "2020-09-11 11:10:34.539729",
+		"lastupdated": "2020-09-17 17:26:07.393941",
 		"locale": "en",
 		"messagedocumentation" : "qqq"
 	},
@@ -1726,8 +1726,6 @@
 	"BOTH_LED": "LED both",
 	"LEFT_INFRARED_SENSOR": "infraredsensor left",
 	"RIGHT_INFRARED_SENSOR": "infraredsensor right",
-	"SERVO_S1": "servo motor S1",
-	"SERVO_S2": "servo motor S2",
 	"SENSOR_ENVIRONMENTAL": "environmental sensor",
 	"SENSOR_ENVIRONMENTAL_GETSAMPLE_TOOLTIP": "Returns values from the environmental sensor.",
 	"ENVIRONMENTAL_TOOLTIP": "Represents an environmental sensor.",
@@ -1735,5 +1733,8 @@
 	"MODE_IAQ": "Indoor Air Quality (IAQ)",
 	"MODE_CALIBRATION": "Calibration Value",
 	"MODE_CO2EQUIVALENT": "CO2 Equivalent",
-	"MODE_VOCEQUIVALENT": "Breathe VOC Equivalent"
+	"MODE_VOCEQUIVALENT": "Breathe VOC Equivalent",
+	"ACTION_PLACEHOLDER": "Placeholder",
+	"ACTION_LCD_EV3": "display",
+	"ACTION_BUZZER_EV3": "speaker"
 }
