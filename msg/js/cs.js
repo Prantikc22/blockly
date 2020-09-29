@@ -693,7 +693,6 @@ Blockly.Msg.MENU_ROBOT_WLAN = "WLAN credentials ...";  // untranslated
 Blockly.Msg.MENU_RUN_MULT_SIM = "multiple robot simulation ...";  // untranslated
 Blockly.Msg.MENU_SAVE = "uložit";
 Blockly.Msg.MENU_SAVE_AS = "uložit jako...";
-Blockly.Msg.MENU_SHORTCUT_VIEW_PROGRAM = "Ctrl + M: My programs";  // untranslated
 Blockly.Msg.MENU_SHOW_AGAIN = "jdi na úvodní obrazovku";
 Blockly.Msg.MENU_SHOW_CODE = "ukázat kód";
 Blockly.Msg.MENU_SIM_BACK = "Zpět";

@@ -693,7 +693,6 @@ Blockly.Msg.MENU_ROBOT_WLAN = "WLAN Zugangsdaten ...";
 Blockly.Msg.MENU_RUN_MULT_SIM = "mehrere Roboter simulieren ...";
 Blockly.Msg.MENU_SAVE = "speichern";
 Blockly.Msg.MENU_SAVE_AS = "speichern unter ...";
-Blockly.Msg.MENU_SHORTCUT_VIEW_PROGRAM = "Ctrl + M: Meine Programme";
 Blockly.Msg.MENU_SHOW_AGAIN = "Starthinweis anzeigen";
 Blockly.Msg.MENU_SHOW_CODE = "zeige Quellcode";
 Blockly.Msg.MENU_SIM_BACK = "Zurück";
