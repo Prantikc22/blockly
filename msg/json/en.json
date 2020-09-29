@@ -1,7 +1,11 @@
 {
 	"@metadata": {
 		"author": "Ellen Spertus <ellen.spertus@gmail.com>",
+<<<<<<< Updated upstream
 		"lastupdated": "2020-09-11 11:10:34.539729",
+=======
+		"lastupdated": "2020-09-29 15:23:30.822750",
+>>>>>>> Stashed changes
 		"locale": "en",
 		"messagedocumentation" : "qqq"
 	},
