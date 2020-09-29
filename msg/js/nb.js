@@ -693,6 +693,7 @@ Blockly.Msg.MENU_ROBOT_WLAN = "WLAN credentials ...";  // untranslated
 Blockly.Msg.MENU_RUN_MULT_SIM = "multiple robot simulation ...";  // untranslated
 Blockly.Msg.MENU_SAVE = "save";
 Blockly.Msg.MENU_SAVE_AS = "save as ...";
+Blockly.Msg.MENU_SHORTCUT_VIEW_PROGRAM = "Ctrl + M: My programs";  // untranslated
 Blockly.Msg.MENU_SHOW_AGAIN = "show welcome note again";
 Blockly.Msg.MENU_SHOW_CODE = "open/close source code view";
 Blockly.Msg.MENU_SIM_BACK = "Back";

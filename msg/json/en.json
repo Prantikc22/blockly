@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"author": "Ellen Spertus <ellen.spertus@gmail.com>",
-		"lastupdated": "2020-09-11 11:10:34.539729",
+		"lastupdated": "2020-09-29 15:14:11.702674",
 		"locale": "en",
 		"messagedocumentation" : "qqq"
 	},
@@ -682,6 +682,7 @@
 	"MENU_STATE_INFO": "state information",
 	"MENU_ABOUT": "about the Open Roberta Lab",
 	"MENU_ABOUT_PROJECT": "about the Open Roberta Project",
+	"MENU_SHORTCUT_VIEW_PROGRAM": "Ctrl + M: My programs",
 	"MENU_LOG_IN": "login ...",
 	"MENU_LOG_OUT": "logout",
 	"MENU_CHANGE": "change ...",
